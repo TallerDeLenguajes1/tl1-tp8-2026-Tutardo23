@@ -39,6 +39,21 @@ int idBuscado;
             if (tareaEncontrada != null)
                 {
                     tareasRealizadas.Add(tareaEncontrada);
-                    tareasPendientes.RemoveAt(tareaEncontrada);
+                    tareasPendientes.RemoveA(tareaEncontrada);
                 }
         }while(idBuscado != 0);
+
+foreach (Tarea tarea in tareasPendientes)
+{
+    Console.WriteLine($"ID: {tarea.TareaID}");
+    Console.WriteLine($"Descripción: {tarea.Descripcion}");
+    Console.WriteLine($"Duración: {tarea.Duracion} minutos");
+    Console.WriteLine("----------------------");
+}
+foreach (Tarea tarea in tareasRealizadas)
+{
+    Console.WriteLine($"ID: {tarea.TareaID}");
+    Console.WriteLine($"Descripción: {tarea.Descripcion}");
+    Console.WriteLine($"Duración: {tarea.Duracion} minutos");
+    Console.WriteLine("----------------------");
+}
